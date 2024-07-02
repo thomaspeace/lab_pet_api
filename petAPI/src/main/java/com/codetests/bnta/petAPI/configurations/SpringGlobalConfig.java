@@ -10,11 +10,11 @@ public class SpringGlobalConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/pets")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("http://localhost:5173")
                 .allowedHeaders("*")
                 .allowedMethods("GET", "POST");
         registry.addMapping("/pets/{id}")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("http://localhost:5173")
                 .allowedHeaders("*")
                 .allowedMethods("DELETE");
     }
