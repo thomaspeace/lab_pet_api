@@ -1,7 +1,24 @@
-const PetList = () => {
+import Pet from "./Pet"
+
+const PetList = ({ pets, deletePet }) => {
+
+
+  const petComponents = pets.map((pet) => {
+    return(
+      <div class="pet-div">
+      <Pet
+        pet = {pet}
+        key = {pet.id}
+        deletePet={deletePet}/>
+      </div>  
+    )
+  })
 
   return(
-    <h4>I'm the PetList</h4>
+    <>
+      <h2>Pets:</h2>
+      {petComponents}
+    </>
   )
 }
 
